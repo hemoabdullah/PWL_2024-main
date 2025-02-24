@@ -35,10 +35,10 @@ return 'Welcome';
  });
 
  Route::get('/about', function () {
-return 'My name is Antonius Kaharap Kautsar and my NIM is 2341720067';
+return 'My name is Hammam Abdullah B.G and my nim is 2341720203';
 });
 
-Route::get('/usera/{name}', function ($name) {
+Route::get('/user/{name}', function ($name) {
     return 'Nama saya '.$name;
 });
 
@@ -51,7 +51,7 @@ Route::get('/articles/{id}', function ($id) {
     return 'Halaman Artikel dengan ID '.$id;
 });
 
-//Route::get('/user/{name?}', function ($name='John') {
+//Route::get('/user/{name?}', function ($name='Hammam') {
 //    return 'Nama saya '.$name;
 //});
 
@@ -98,6 +98,11 @@ Route::get('/articles', [PageController::class,'articles']);
 
 // Route::post('/articles/{articles}', [ArticleController::class, 'articles']);
 
+//   Route::get('/greeting', function () {
+//       return view('blog.hello', ['name' => 'Hammam']);
+//      });
+
+
 Route::get('/', action: [HomeController::class, 'index']);
 Route::get('about', action: [AboutController::class, 'about']);
 Route::get('articles/{index}', action: [ArticleController::class, 'articles']);
@@ -115,3 +120,4 @@ Route::resource('photos', PhotoController::class)->only([
 ]);
 Route::get('/greeting', [WelcomeController::class,
 'greeting']);
+
